@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="tet">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Filomeno O.M.G De Jesus | Portfolio</title>
+<meta name="description" content="Portfolio Filomeno O.M.G De Jesus - Estudante DIT, Hardware, Software, Edit Video, Canva no Prompt AI">
+<style>
+  :root {
+    --merah: #ce2b37;
+    --kuning: #f5c400;
+    --preto: #111111;
+    --branco: #ffffff;
+    --cinza: #1c1c22;
+    --texto: #f4f4f6;
+    --texto-suave: #b9b9c4;
+    --kartu: rgba(255, 255, 255, 0.06);
+    --borda: rgba(255, 255, 255, 0.12);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+    background: var(--preto);
+    color: var(--texto);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* Fundu aesthetic: gradient bilan ho kór bandeira Timor-Leste */
+  .fundu {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background:
+      radial-gradient(circle at 15% 20%, rgba(206, 43, 55, 0.35), transparent 40%),
+      radial-gradient(circle at 85% 80%, rgba(245, 196, 0, 0.22), transparent 40%),
+      linear-gradient(160deg, #0d0d10 0%, #1a1a22 100%);
+  }
+
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 6%;
+    background: rgba(13, 13, 16, 0.75);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--borda);
+  }
+
+  .logo {
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    background: linear-gradient(90deg, var(--merah), var(--kuning));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 1.4rem;
+    list-style: none;
+  }
+
+  nav a {
+    color: var(--texto-suave);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+  }
+
+  nav a:hover { color: var(--kuning); }
+
+  section { padding: 5rem 6%; }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3rem;
+    align-items: center;
+    min-height: calc(100vh - 70px);
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 0.35rem 0.9rem;
+    border: 1px solid var(--borda);
+    border-radius: 999px;
+    font-size: 0.85rem;
+    color: var(--kuning);
+    background: rgba(245, 196, 0, 0.08);
+    margin-bottom: 1.2rem;
+  }
+
+  h1 {
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    line-height: 1.1;
+    margin-bottom: 0.6rem;
+  }
+
+  h1 span {
+    background: linear-gradient(90deg, var(--merah), var(--kuning));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .subtitle {
+    font-size: 1.15rem;
+    color: var(--texto-suave);
+    margin-bottom: 2rem;
+    max-width: 520px;
+  }
+
+  .botaun {
+    display: inline-block;
+    padding: 0.85rem 1.6rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 0.8rem;
+    margin-bottom: 0.8rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .botaun:hover { transform: translateY(-3px); }
+
+  .botaun-primariu {
+    background: linear-gradient(90deg, var(--merah), #e8473f);
+    color: var(--branco);
+    box-shadow: 0 10px 25px rgba(206, 43, 55, 0.35);
+  }
+
+  .botaun-sekundariu {
+    border: 1px solid var(--borda);
+    color: var(--texto);
+    background: var(--kartu);
+  }
+
+  /* Foto ho moldura aesthetic */
+  .foto-area {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .foto-area::before {
+    content: "";
+    position: absolute;
+    width: 90%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: conic-gradient(var(--merah), var(--kuning), var(--merah));
+    filter: blur(40px);
+    opacity: 0.45;
+    top: 5%;
+    animation: gira 12s linear infinite;
+  }
+
+  .foto-moldura {
+    position: relative;
+    width: min(340px, 85%);
+    border-radius: 28px;
+    padding: 6px;
+    background: linear-gradient(135deg, var(--merah), var(--kuning));
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+  }
+
+  .foto-moldura img {
+    width: 100%;
+    display: block;
+    border-radius: 22px;
+    object-fit: cover;
+  }
+
+  .selu-tulun {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(17, 17, 17, 0.85);
+    border: 1px solid var(--borda);
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    backdrop-filter: blur(6px);
+  }
+
+  @keyframes gira {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .liña {
+    width: 60px;
+    height: 4px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--merah), var(--kuning));
+    margin-bottom: 2.2rem;
+  }
+
+  .kartu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.4rem;
+  }
+
+  .kartu {
+    background: var(--kartu);
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+    padding: 1.8rem;
+    transition: transform 0.3s, border-color 0.3s;
+  }
+
+  .kartu:hover {
+    transform: translateY(-6px);
+    border-color: rgba(245, 196, 0, 0.5);
+  }
+
+  .ikon {
+    font-size: 2rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .kartu h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .kartu p {
+    color: var(--texto-suave);
+    font-size: 0.95rem;
+  }
+
+  .kartu ul {
+    list-style: none;
+    margin-top: 0.8rem;
+  }
+
+  .kartu li {
+    color: var(--texto-suave);
+    font-size: 0.93rem;
+    padding: 0.25rem 0;
+  }
+
+  .kartu li::before {
+    content: "◆ ";
+    color: var(--kuning);
+    font-size: 0.7rem;
+  }
+
+  .sobre {
+    background: rgba(255, 255, 255, 0.02);
+    border-top: 1px solid var(--borda);
+    border-bottom: 1px solid var(--borda);
+  }
+
+  .sobre-texto {
+    max-width: 760px;
+    font-size: 1.1rem;
+    color: var(--texto-suave);
+  }
+
+  .sobre-texto strong { color: var(--texto); }
+
+  .info-linha {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .info-item {
+    padding: 0.9rem 1.2rem;
+    border-radius: 14px;
+    background: var(--kartu);
+    border: 1px solid var(--borda);
+    font-size: 0.95rem;
+  }
+
+  .info-item span {
+    display: block;
+    color: var(--texto-suave);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .projeitu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+    background: var(--kartu);
+    border: 1px solid var(--borda);
+    border-radius: 24px;
+    padding: 2.5rem;
+  }
+
+  .projeitu-logo {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 18px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .projeitu-logo img {
+    width: 88%;
+    height: auto;
+  }
+
+  .projeitu h3 {
+    font-size: 1.7rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .projeitu p {
+    color: var(--texto-suave);
+    margin-bottom: 1rem;
+  }
+
+  .tag-pekeno {
+    display: inline-block;
+    margin: 0.2rem 0.3rem 0.2rem 0;
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    background: rgba(206, 43, 55, 0.18);
+    border: 1px solid rgba(206, 43, 55, 0.4);
+    color: var(--texto);
+  }
+
+  .kontaktu {
+    text-align: center;
+  }
+
+  .kontaktu h2 { margin-bottom: 0.5rem; }
+
+  .kontaktu p {
+    color: var(--texto-suave);
+    margin-bottom: 2rem;
+  }
+
+  .kontaktu-botaun {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--texto-suave);
+    border-top: 1px solid var(--borda);
+  }
+
+  @media (max-width: 860px) {
+    .hero, .projeitu {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    .subtitle { margin-left: auto; margin-right: auto; }
+    .botaun { margin-right: 0.4rem; }
+    .foto-area { order: -1; }
+    .info-linha { justify-content: center; }
+    nav ul { gap: 0.9rem; font-size: 0.85rem; }
+    nav ul li:nth-child(n+4) { display: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .foto-area::before { animation: none; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<div class="fundu"></div>
+
+<nav>
+  <div class="logo">FG</div>
+  <ul>
+    <li><a href="#inicio">Inísiu</a></li>
+    <li><a href="#sobre">Kona-ba Ha'u</a></li>
+    <li><a href="#skill">Skill</a></li>
+    <li><a href="#projetu">Projetu</a></li>
+    <li><a href="#kontaktu">Kontaktu</a></li>
+  </ul>
+</nav>
+
+<section class="hero" id="inicio">
+  <div class="hero-texto">
+    <span class="tag">🎓 Estudante DIT – Dili Institute of Technology</span>
+    <h1>Olá, ha'u <span>Filomeno O.M.G De Jesus</span></h1>
+    <p class="subtitle">
+      Ha'u estuda iha Dili Institute of Technology. Ha'u gosta halo tuir teknolojia, hardware, software no design, no ha'u hakarak uza ha'u nia skill atu ajuda komunidade Timor-Leste.
+    </p>
+    <a href="#projetu" class="botaun botaun-primariu">Haree ha'u nia projetu</a>
+    <a href="#kontaktu" class="botaun botaun-sekundariu">Kontaktu ha'u</a>
+  </div>
+
+  <div class="foto-area">
+    <div class="foto-moldura">
+      <img src="foto.jpg" alt="Foto Filomeno O.M.G De Jesus">
+    </div>
+    <div class="selu-tulun">Filomeno O.M.G De Jesus · DIT</div>
+  </div>
+</section>
+
+<section class="sobre" id="sobre">
+  <div class="liña"></div>
+  <h2>Kona-ba Ha'u</h2>
+  <p class="sobre-texto">
+    Ha'u nian naran <strong>Filomeno O.M.G De Jesus</strong>, estudante iha <strong>Dili Institute of Technology (DIT)</strong>.
+    Ha'u kria sistema ba loja ki'ik nian atu ajuda vendedór sira labele tan uza katak manual. Ha'u uza <strong>Tetun 100%</strong> iha sistema ne'e, tanba ha'u hakarak ema Timor-Leste sira bele uza didi'ak.
+  </p>
+  <div class="info-linha">
+    <div class="info-item"><span>Eskola</span>Dili Institute of Technology</div>
+    <div class="info-item"><span>Estatutu</span>Estudante</div>
+    <div class="info-item"><span>Lokal</span>Dili, Timor-Leste</div>
+  </div>
+</section>
+
+<section id="skill">
+  <div class="liña"></div>
+  <h2>Ha'u nia Skill</h2>
+  <p class="sobre-texto" style="margin-bottom:2.5rem;">Skill sira ne'ebé ha'u iha no uza ba serbisu ida-idak.</p>
+
+  <div class="kartu-grid">
+    <div class="kartu">
+      <div class="ikon">🔧</div>
+      <h3>Hardware</h3>
+      <p>Sobu monta komputador no CPU.</p>
+      <ul>
+        <li>Monta komputador</li>
+        <li>Sobu monta CPU</li>
+        <li>Konserta hardware ki'ik</li>
+      </ul>
+    </div>
+
+    <div class="kartu">
+      <div class="ikon">💻</div>
+      <h3>Software</h3>
+      <p>Instala no konfigura sistema iha komputador no telefone.</p>
+      <ul>
+        <li>Instala sistema operasional</li>
+        <li>Instala aplikasaun</li>
+        <li>Kria sistema ki'ik</li>
+      </ul>
+    </div>
+
+    <div class="kartu">
+      <div class="ikon">🎬</div>
+      <h3>Edit Video</h3>
+      <p>Edita video ba konteúdu no promosaun.</p>
+      <ul>
+        <li>Korta no junta video</li>
+        <li>Adisiona musika no lejenda</li>
+      </ul>
+    </div>
+
+    <div class="kartu">
+      <div class="ikon">🎨</div>
+      <h3>Canva Design</h3>
+      <p>Kria design aesthetic ba media sosial no promosaun.</p>
+      <ul>
+        <li>Poster no flyer</li>
+        <li>Post ba media sosial</li>
+      </ul>
+    </div>
+
+    <div class="kartu">
+      <div class="ikon">🤖</div>
+      <h3>Prompt AI Profisional</h3>
+      <p>Hakerek prompt ne'ebé klaru atu uza ba AI hotu.</p>
+      <ul>
+        <li>Prompt ba testu no ideia</li>
+        <li>Prompt ba imajen no video</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="projetu">
+  <div class="liña"></div>
+  <h2>Ha'u nia Projetu</h2>
+  <p class="sobre-texto" style="margin-bottom:2.5rem;">Sistema ne'ebé ha'u kria ba loja ki'ik nian.</p>
+
+  <div class="projeitu">
+    <div class="projeitu-logo">
+      <img src="logo-loja-kiik.svg" alt="Logo Loja Ki'ik">
+    </div>
+    <div>
+      <h3>Loja Simples</h3>
+      <p>
+        Sistema kasir ba APK Android, atu ajuda vendedór sira labele uza nota manual tan ona. Sistema ne'e uza <strong>Tetun 100%</strong> no fasil atu uza.
+      </p>
+      <p>Funsaun sira iha laran:</p>
+      <div>
+        <span class="tag-pekeno">Halo venda ho kareta</span>
+        <span class="tag-pekeno">Jestaun stock</span>
+        <span class="tag-pekeno">Kalkula osan troka</span>
+        <span class="tag-pekeno">Venda pulsa telefone</span>
+        <span class="tag-pekeno">Historiku venda</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="kontaktu" id="kontaktu">
+  <div class="liña" style="margin-left:auto; margin-right:auto;"></div>
+  <h2>Kontaktu Ha'u</h2>
+  <p>Hakarak serbisu ka hakarak hatene liu tan? Kontaktu ha'u liu husi kanal sira ne'e.</p>
+
+  <div class="kontaktu-botaun">
+    <a href="mailto:filomenogoncalves66@gmail.com" class="botaun botaun-sekundariu">✉️ filomenogoncalves66@gmail.com</a>
+    <a href="https://wa.me/67074505067" target="_blank" rel="noopener" class="botaun botaun-primariu">💬 WhatsApp +670 74505067</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Filomeno O.M.G De Jesus · Dili, Timor-Leste · Halo ho ❤️ iha Tetun
+</footer>
+
+</body>
+</html>
